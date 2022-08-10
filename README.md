@@ -1,1 +1,1 @@
-Repositorio de mi CV hecho con el paquete ::vitae:: para R y un currículum de ciencia de datos construido con el paquete pagedown.
+### Repositorio de mi CV hecho con el paquete `::vitae::` 
