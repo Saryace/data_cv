@@ -1,0 +1,102 @@
+---
+name: Sara  
+surname: Acevedo
+position: "estudiante doctorado"
+address: "Santiago, Chile"
+phone: +56 9 576 50 773
+www: saryace.github.io
+email: "seaceved@uc.cl"
+twitter: saryace
+github: Saryace
+date: "`r format(Sys.time(), '%B %Y')`"
+output: 
+  vitae::moderncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+options(tinytex.verbose = TRUE)
+library(vitae)
+library(kableExtra)
+library(tinytex)
+```
+
+# \faIcon{female} Sobre mí
+
+* Actualmente estoy terminando mi doctorado en Ciencias de la Ingeniería. 
+* Mi investigación levanta datos de ciencia del suelo y estudios ambientales, para derivar en análisis estadístico y modelos predictivos. 
+* Imparto clases de introducción a data science usando R. 
+
+# \faIcon{university} Educación
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Doctorado en Ciencias de la Ingeniería, mención Ingeniería Civil", "2016-2022", "Pontificia Universidad Católica de Chile", "Santiago, Chile",
+  "Master of Science, Soil and Biogeochemistry", "2012-2014", "University of California-Davis", "Davis, USA",
+  "Químico, mención Analítica y Ambiental", "2003-2009", "Pontificia Universidad Católica de Chile", "Santiago, Chile"
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# \faIcon{briefcase} Empleos
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+    "2022", "Educación", "Facilitador curso: Introducción a Tidyverse para Ciencia de Datos en R para Estacion Lastarria",
+  "2020 - 2021", "Educación", "Course maintainer MOOCs Coursera UC: Introducción a Python e Introducción al Aprendizaje Universitario",
+  "2018 - 2020", "Educación", "Ayudante del curso Biofísica Ambiental en Pontificia Universidad Católica de Chile",
+  "2018 - 2019", "Investigación", "Estudios infiltración en suelos para Desalsolar SPA",
+  "2015 - 2019", "Investigación", "Evaluación científica y técnica del plan de trabajo y presupuesto de propuestas CORFO"
+) %>% 
+  detailed_entries(Type,Year,Desc)
+```
+\newpage
+
+
+# \faIcon{hammer} Herramientas
+
+* \faIcon{desktop} Programación: 
+  * R -- Python (básico)
+* \faIcon{desktop} Software:
+  * Rstudio -- ArcGis (básico) -- Zotero -- Hydrus 1-D
+* \faIcon{calculator} Estadística
+  * Modelación (modelos lineales y machine-learning)
+* \faIcon{thermometer-three-quarters} Análisis medioambiental
+  * Campañas de terreno -- Análisis e interpretación de datos de calidad de agua y suelo
+  * Especialidad en física de suelos (infiltración y balance hídrico)
+* \faIcon{cogs} Otros:
+  * Inglés avanzado -- Git/Github (básico) -- Markdown (RMarkdown y Github-flavored)
+
+# \faIcon{file} Publicaciones seleccionadas
+
+## Para ver la lista completa, ver mi perfil [ORCID](https://orcid.org/0000-0003-3203-2106) \faIcon{mouse} o [Google Scholar](https://scholar.google.com/citations?user=WJqqnIQAAAAJ&hl=es) \faIcon{mouse}
+
+```{r}
+tribble(
+  ~ article, ~ Year, ~ journal, ~ autores,
+  "A comparative study of soil metal concentrations in Chilean urban parks using four pollution indexes", "2022", "Applied Geochemistry", "Alejandra S.Vega, Guillermo Arce, Javier I.Rivera, Sara E.Acevedo, SoniaReyes-Paecke, Carlos A. Bonilla, Pablo Pastén",
+  "Unveiling soil temperature reached during a wildfire event using ex-post chemical and hydraulic soil analysis", "2022", "Science of The Total Environment", "Sofía I.Martínez, Cristina P.Contreras, Sara E.Acevedo, Carlos A.Bonilla",
+  "Testing the integral suspension pressure method for soil particle size analysis across a range of soil organic matter contents", "2021", "International Agrophysics", "Sara E. Acevedo, Cristina P. Contreras, Carlos J. Ávila 1, Carlos A. Bonilla"
+) %>% 
+  detailed_entries(article,Year,journal,autores)
+```
+
+# \faIcon{medal} Distinciones
+
+* Beca ANID Doctorado Nacional 2016
+* Beca ANID/ Becas Chile Magíster Extranjero 2012
+
+# \faIcon{heart} Voluntariado
+
+* [R-Ladies Chile desde 2018](https://vimeo.com/rladieschile)  \faIcon{mouse}
+* Generación de contenido en [Laboratorio de Biofísica de Suelos UC](https://www.youtube.com/channel/UCtpWXCy2NDEWpdeGLoyHmBg) \faIcon{mouse}
+
+# \faIcon{comment} Referencias
+
+* Dr. Manuel Bugueño: Gerente Desalsolar SPA \faIcon{mail-bulk} buguenomanuel at gmail.com 
+* Dra. Alejandra Vega: Postdoctorado CEDEUS \faIcon{mail-bulk} asvega at uc.cl
+* Dr. Carlos Bonilla: Director Tesis Doctoral \faIcon{mail-bulk} cbonilla at ing.puc.cl
+
